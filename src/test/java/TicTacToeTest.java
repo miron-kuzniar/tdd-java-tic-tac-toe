@@ -44,4 +44,10 @@ public class TicTacToeTest {
         ticTacToe.play(1, 1 );
         Assert.assertEquals('O', ticTacToe.nextPlayer());
     }
+
+    @Test
+    public void whenPlayThenNoWinner() {
+        String actual = ticTacToe.play(1, 1);
+        Assert.assertEquals("Brak zwycięzcy", actual);
+    }
 }
