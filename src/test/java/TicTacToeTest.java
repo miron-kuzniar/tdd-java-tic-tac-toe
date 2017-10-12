@@ -50,4 +50,14 @@ public class TicTacToeTest {
         String actual = ticTacToe.play(1, 1);
         Assert.assertEquals("Brak zwycięzcy", actual);
     }
+
+    @Test
+    public void whenPlayAndWholeHorizontalLineThenWinner() {
+        ticTacToe.play(1,1); // X
+        ticTacToe.play(1,2); // O
+        ticTacToe.play(2,1); // X
+        ticTacToe.play(2, 2); // O
+        String actual = ticTacToe.play(3, 1); // X
+        Assert.assertEquals("Wygrał X", actual);
+    }
 }
