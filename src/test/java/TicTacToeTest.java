@@ -71,4 +71,14 @@ public class TicTacToeTest {
         String actual = ticTacToe.play(1, 3); // O
         Assert.assertEquals("Wygrał O", actual);
     }
+
+    @Test
+    public void whenPlayAndTopBottomDiagonalLineThenWinner() {
+        ticTacToe.play(1,1); // X
+        ticTacToe.play(1,2); // O
+        ticTacToe.play(2,2); // X
+        ticTacToe.play(1,3); // O
+        String actual = ticTacToe.play(3,3); // X
+        Assert.assertEquals("Wygrał X", actual);
+    }
 }
