@@ -20,4 +20,8 @@ public class TicTacToe {
             board[x - 1][y - 1] = 'X';
         }
     }
+
+    public char nextPlayer() {
+        return 'X';
+    }
 }
