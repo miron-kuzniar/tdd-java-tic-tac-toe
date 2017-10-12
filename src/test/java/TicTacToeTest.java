@@ -48,7 +48,7 @@ public class TicTacToeTest {
     @Test
     public void whenPlayThenNoWinner() {
         String actual = ticTacToe.play(1, 1);
-        Assert.assertEquals("Brak zwycięzcy", actual);
+        Assert.assertEquals("No Winner", actual);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class TicTacToeTest {
         ticTacToe.play(2,1); // X
         ticTacToe.play(2, 2); // O
         String actual = ticTacToe.play(3, 1); // X
-        Assert.assertEquals("Wygrał X", actual);
+        Assert.assertEquals("X Wins", actual);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class TicTacToeTest {
         ticTacToe.play(1,2); // O
         ticTacToe.play(2,2); // X
         String actual = ticTacToe.play(1, 3); // O
-        Assert.assertEquals("Wygrał O", actual);
+        Assert.assertEquals("O Wins", actual);
     }
 
     @Test
@@ -79,7 +79,7 @@ public class TicTacToeTest {
         ticTacToe.play(2,2); // X
         ticTacToe.play(1,3); // O
         String actual = ticTacToe.play(3,3); // X
-        Assert.assertEquals("Wygrał X", actual);
+        Assert.assertEquals("X Wins", actual);
     }
 
     @Test
@@ -89,6 +89,6 @@ public class TicTacToeTest {
         ticTacToe.play(2,2); // X
         ticTacToe.play(1,2); // O
         String actual = ticTacToe.play(3,1); // X
-        Assert.assertEquals("Wygrał X", actual);
+        Assert.assertEquals("X Wins", actual);
     }
 }
