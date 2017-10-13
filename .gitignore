@@ -2,3 +2,19 @@
 \.idea/workspace\.xml
 
 *.class
+
+\.gradle/3\.5-rc-2/file-changes/last-build\.bin
+
+\.gradle/3\.5-rc-2/fileContent/
+
+\.gradle/3\.5-rc-2/taskHistory/
+
+\.gradle/buildOutputCleanup/
+
+\.idea/libraries/
+
+\.idea/modules/
+
+build/tmp/jar/
+
+build/libs/
