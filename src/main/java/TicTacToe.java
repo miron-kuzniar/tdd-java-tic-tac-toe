@@ -8,12 +8,13 @@ public class TicTacToe {
         checkAxis(y);
         lastPlayer = nextPlayer();
         setBox(x, y, lastPlayer);
-        for (int index = 0; index < 3; index++) {
-            if (isWin()) {
-                return lastPlayer + " Wins";
-            }
+        if (isWin()) {
+            return lastPlayer + " Wins";
+        } else if (isDraw()) {
+            return "It's a draw";
+        } else {
+            return "No Winner";
         }
-        return "No Winner";
     }
 
     private boolean isWin() {
@@ -33,6 +34,16 @@ public class TicTacToe {
             return true;
         }
         return false;
+    }
+
+    private boolean isDraw() {
+        for (int x = 0; x < SIZE; x++) {
+            for (int y = 0; y < SIZE; y++) {
+                if (board[x][y] == '\0') {
+                    return false;
+                }
+            }
+        } return true;
     }
 
 
